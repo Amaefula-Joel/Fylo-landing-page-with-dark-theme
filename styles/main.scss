@@ -1,2 +1,159 @@
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Raleway', sans-serif;
+@import 'variables';
+@import 'base';
+
+.container{
+    width: 100%;
+    max-width: 1250px;
+}
+
+.custom-btn{
+    background: linear-gradient(to right, $Cyan-gradient, $Blue-gradient);
+    color: $white;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 26px;
+    width: 100%;
+    max-width: 212px;
+    &:hover{
+        background: linear-gradient(to right, $Cyan-gradient, $Cyan-gradient);
+    }
+}
+
+.navbar-con{
+    background-color: $intro-and-email-bg;
+    .navbar{ 
+        .nav-item{
+            a{
+                color: rgb(202, 201, 201);
+                font-size: 15px;
+                margin-left: 25px;
+                &:hover{
+                    text-decoration: underline;
+                    color: $white;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .logo img{height: 30px;}
+            .nav-item a{
+                font-size: 13px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.intro{
+    background-color: $intro-and-email-bg;
+    >div{
+        max-width: 700px;
+        p{
+            font-size: 17px;
+        }
+    }
+}
+
+.main{
+    padding: 100px 0;
+    background-color: $main-bg;
+    .display{
+        gap: 50px 7%;
+        .display-content{
+            width: 100%;
+            max-width: 400px;
+            h2{
+                font-size: 19px;
+            }
+        }
+    }
+    .productive{
+        .productive-content{
+            p{ font-size: 15px; }
+            a{ 
+                color: $Cyan-gradient;
+                padding-bottom: 5px;
+                border-bottom: 2px solid $Cyan-gradient;
+                &:hover{
+                    text-decoration: none;
+                    color: $white;
+                    border-color: $white;
+
+                    svg .bg{
+                        fill: $white;
+                    }
+                }
+
+                svg{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .testimonial-container{
+        .quotes{
+            position: absolute;
+            bottom: calc(100% - 10px);
+            left: -7px;
+            z-index: -1;
+        }
+        .testimonial{
+            padding: 30px;
+            width: calc(33% - 20px);
+            max-width: 500px;
+            background-color: $testimonials-bg;
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            p{color: $light-gray;}
+            >p{
+                font-size: 13px;
+                
+            }
+            h3{
+                font-size: 12px;
+            }
+            .profile p{font-size: 12px;}
+        }
+        @media (max-width: 992px) {
+            .testimonial{
+                width: calc(50% - 10px);
+            }
+            @media (max-width: 576px) {
+                .quotes {
+                    left: 0;
+                    bottom: 100%;
+                    img{
+                        height: 26px;
+                    }
+                }
+                .testimonial{
+                    width: 100%;;
+                }
+            }
+        }
+    }
+}
+
+.sign-in-container{
+    background: linear-gradient(to bottom, $main-bg 50%, $footer-bg 50%);
+    .sign-in-content{
+        width: 100%;
+        max-width: 750px;
+        background-color: $intro-and-email-bg;
+        p{
+            font-size: 13px;
+        }
+        form input{
+            color: $white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 26px;
+            width: 100%;
+        }
+    }
+}

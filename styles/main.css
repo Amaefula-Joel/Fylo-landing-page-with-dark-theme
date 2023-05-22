@@ -1,1 +1,271 @@
-/*# sourceMappingURL=main.css.map */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+
+/* utilities */
+/* screen reader hack */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip-path: rect(0, 0, 0, 0);
+          clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+/* my own base styles */
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Raleway", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 38px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+p {
+  color: hsl(0, 0%, 75%);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  p {
+    font-size: 14px !important;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1250px;
+}
+
+.custom-btn {
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  color: hsl(0, 0%, 100%);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 26px;
+  width: 100%;
+  max-width: 212px;
+}
+.custom-btn:hover {
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+}
+
+.navbar-con {
+  background-color: hsl(217, 28%, 15%);
+}
+.navbar-con .navbar .nav-item a {
+  color: rgb(202, 201, 201);
+  font-size: 15px;
+  margin-left: 25px;
+}
+.navbar-con .navbar .nav-item a:hover {
+  text-decoration: underline;
+  color: hsl(0, 0%, 100%);
+}
+@media (max-width: 768px) {
+  .navbar-con .navbar .logo img {
+    height: 30px;
+  }
+  .navbar-con .navbar .nav-item a {
+    font-size: 13px;
+    margin-left: 15px;
+  }
+}
+
+.intro {
+  background-color: hsl(217, 28%, 15%);
+}
+.intro > div {
+  max-width: 700px;
+}
+.intro > div p {
+  font-size: 17px;
+}
+
+.main {
+  padding: 100px 0;
+  background-color: hsl(218, 28%, 13%);
+}
+.main .display {
+  gap: 50px 7%;
+}
+.main .display .display-content {
+  width: 100%;
+  max-width: 400px;
+}
+.main .display .display-content h2 {
+  font-size: 19px;
+}
+.main .productive .productive-content p {
+  font-size: 15px;
+}
+.main .productive .productive-content a {
+  color: hsl(176, 68%, 64%);
+  padding-bottom: 5px;
+  border-bottom: 2px solid hsl(176, 68%, 64%);
+}
+.main .productive .productive-content a:hover {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%);
+}
+.main .productive .productive-content a:hover svg .bg {
+  fill: hsl(0, 0%, 100%);
+}
+.main .productive .productive-content a svg {
+  display: inline-block;
+}
+.main .testimonial-container .quotes {
+  position: absolute;
+  bottom: calc(100% - 10px);
+  left: -7px;
+  z-index: -1;
+}
+.main .testimonial-container .testimonial {
+  padding: 30px;
+  width: calc(33% - 20px);
+  max-width: 500px;
+  background-color: hsl(219, 30%, 18%);
+}
+.main .testimonial-container .testimonial img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.main .testimonial-container .testimonial p {
+  color: hsl(0, 0%, 75%);
+}
+.main .testimonial-container .testimonial > p {
+  font-size: 13px;
+}
+.main .testimonial-container .testimonial h3 {
+  font-size: 12px;
+}
+.main .testimonial-container .testimonial .profile p {
+  font-size: 12px;
+}
+@media (max-width: 992px) {
+  .main .testimonial-container .testimonial {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 992px) and (max-width: 576px) {
+  .main .testimonial-container .quotes {
+    left: 0;
+    bottom: 100%;
+  }
+  .main .testimonial-container .quotes img {
+    height: 26px;
+  }
+  .main .testimonial-container .testimonial {
+    width: 100%;
+  }
+}
+
+.sign-in-container {
+  background: linear-gradient(to bottom, hsl(218, 28%, 13%) 50%, hsl(216, 53%, 9%) 50%);
+}
+.sign-in-container .sign-in-content {
+  width: 100%;
+  max-width: 750px;
+  background-color: hsl(217, 28%, 15%);
+}
+.sign-in-container .sign-in-content p {
+  font-size: 13px;
+}
+.sign-in-container .sign-in-content form input {
+  color: hsl(0, 0%, 100%);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 26px;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
