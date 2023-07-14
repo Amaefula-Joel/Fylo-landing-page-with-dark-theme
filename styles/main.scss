@@ -63,6 +63,9 @@
         .display-content{
             width: 100%;
             max-width: 400px;
+
+            img{ height: 80px; }
+
             h2{
                 font-size: 19px;
             }
@@ -112,7 +115,6 @@
             p{color: $light-gray;}
             >p{
                 font-size: 13px;
-                
             }
             h3{
                 font-size: 12px;
@@ -156,4 +158,58 @@
             width: 100%;
         }
     }
+}
+
+footer{
+    background-color: $footer-bg;
+    padding: 50px 0;
+
+    .logo img{
+        height: 34px;
+    }
+
+    .links a{
+        color: $light-gray;
+        &:hover{
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    .round-icon{
+        border-radius: 50%;
+        font-size: 16px;
+        height: 35px;
+        width: 35px;
+        color: white;
+        border: 1px solid white;
+        &:not(:last-child){ margin-right: 9px; }
+        &:hover{
+            border-color: $Blue-gradient;
+            color: $Blue-gradient;
+            text-decoration: none;
+        }
+    }
+}
+
+.curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateY(-100%);
+}
+
+.curve img {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    // height: 121px;
+    transform: scaleY(1);
+}
+
+.curve {
+    fill: #FFFFFF;
 }
